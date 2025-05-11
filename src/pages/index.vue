@@ -1,5 +1,32 @@
 <template>
   <v-app>
+    <!-- Top Toolbar -->
+    <v-app-bar color="white" flat app height="80">
+      <v-container class="d-flex justify-space-between align-center">
+        <!-- Logo -->
+        <v-row align="center" no-gutters>
+          <!-- <v-img src="/logo.svg" alt="Logo" max-height="40" max-width="160" contain class="mr-4"></v-img> -->
+        </v-row>
+
+        <!-- Nav Links -->
+        <v-row class="d-none d-md-flex" align="center" no-gutters>
+          <v-btn variant="text" class="text-uppercase font-weight-bold" color="primary">About</v-btn>
+          <v-btn variant="text" class="text-uppercase font-weight-bold" color="primary">Contact</v-btn>
+          <v-btn variant="text" class="text-uppercase font-weight-bold" color="primary">News</v-btn>
+          <v-btn variant="text" class="text-uppercase font-weight-bold" color="primary">Services</v-btn>
+          <v-btn variant="text" class="text-uppercase font-weight-bold" color="primary">Policy & Solutions</v-btn>
+        </v-row>
+
+        <!-- Icons -->
+        <v-row align="center" class="ml-4" no-gutters>
+          <v-icon color="red" class="mx-2">mdi-youtube</v-icon>
+          <v-icon color="red" class="mx-2">mdi-twitter</v-icon>
+          <v-icon color="red" class="mx-2">mdi-instagram</v-icon>
+          <v-icon color="red" class="mx-2">mdi-facebook</v-icon>
+          <v-icon color="red">mdi-email</v-icon>
+        </v-row>
+      </v-container>
+    </v-app-bar>
     <v-main>
       <!-- Hero Section -->
       <section class="hero-section">
