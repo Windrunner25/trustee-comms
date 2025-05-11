@@ -85,7 +85,6 @@ const previousNewsletters = [
   background: linear-gradient(135deg, #e6e7d8, #dbc979);
   color: #333;
   font-family: 'Montserrat', sans-serif;
-
 }
 
 .hover-card {
