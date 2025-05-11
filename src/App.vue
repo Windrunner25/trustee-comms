@@ -11,3 +11,9 @@
     </v-main>
   </v-app>
 </template>
+
+<style>
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+</style>

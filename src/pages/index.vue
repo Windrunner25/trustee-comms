@@ -43,7 +43,7 @@
                   This month we unpack what's changing in the data landscape — and how to stay ahead.
                 </v-card-text>
                 <v-card-actions>
-                  <v-btn color="primary" variant="tonal">Read Now</v-btn>
+                  <v-btn color="primary" variant="tonal">Read</v-btn>
                 </v-card-actions>
               </v-card>
             </v-col>
@@ -61,7 +61,7 @@
                 <v-card-title class="text-h6">{{ issue.title }}</v-card-title>
                 <v-card-subtitle class="text-caption">{{ issue.date }}</v-card-subtitle>
                 <v-card-actions>
-                  <v-btn color="primary" text>Read</v-btn>
+                  <v-btn color="primary" variant="tonal" text>Read</v-btn>
                 </v-card-actions>
               </v-card>
             </v-col>
@@ -82,8 +82,10 @@ const previousNewsletters = [
 
 <style scoped>
 .hero-section {
-  background: linear-gradient(135deg, #eef6df, #d0e5b9);
+  background: linear-gradient(135deg, #e6e7d8, #dbc979);
   color: #333;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .hover-card {
@@ -121,4 +123,5 @@ const previousNewsletters = [
     transform: translateY(0);
   }
 }
+
 </style>
