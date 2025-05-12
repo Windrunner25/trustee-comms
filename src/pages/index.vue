@@ -10,6 +10,10 @@
                 Brian Wolf - Board of Trustees
               </h1>
               <p class="text-subtitle-1 mb-6 fade-slide">
+                Serving a three-year term as the student representative to the Board
+                of Trustees at DePauw University.
+              </p>
+              <p class="text-subtitle-1 mb-6 fade-slide">
                 Subscribe to receive communications about what I am working on
                 as a Trustee.
               </p>
