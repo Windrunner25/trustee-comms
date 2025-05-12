@@ -16,7 +16,7 @@
               issue.date
             }}</v-card-subtitle>
             <v-card-actions>
-            <NewsletterButton/>
+            <NewsletterButton :newsletter="april2025[0]"/>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -30,6 +30,13 @@ import NewsletterButton from "@/components/NewsletterButton.vue";
 
 const previousNewsletters = [
   { title: "April 2025 - DSG Elections", date: "April 18, 2025" },
+];
+
+const april2025 = [
+  {
+    title: "April 2025 - DSG Elections",
+    body: "Throughout the month of April, I was preparing for and running my DSG campaign. After ten days of campaigning and three days of voting, I was elected as the student representative to the Board of Trustees.",
+  },
 ];
 </script>
 

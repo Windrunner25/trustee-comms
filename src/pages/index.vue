@@ -54,11 +54,10 @@
                 <v-card-text class="mt-2">
                   This month, I attended a dinner with the Board of Trustees at
                   the President's house. I introduced myself as the incoming
-                  student representative to current Trustees and shared my
-                  background and qualifications.
+                  student representative to current Trustees.
                 </v-card-text>
                 <v-card-actions>
-                  <v-btn color="primary" variant="tonal">Read</v-btn>
+                  <NewsletterButton :newsletter="may2025[0]" />
                 </v-card-actions>
               </v-card>
             </v-col>
@@ -70,7 +69,20 @@
   </v-app>
 </template>
 
-<script setup></script>
+<script setup>
+const may2025 = [
+  {
+    title: "May 2025 - DSG Elections",
+    body: `As a Presidential Ambassador, I often host Trustees when they are on campus. 
+ This past week, I attended a dinner with the Board of Trustees at President Lori 
+ White's house. The first hour of the evening was spent mingling and discussing
+ events from the day of meetings. At dinner, I shared more about myself and the
+ campus experiences I hope to draw on as a student representative. Conversation points
+ included my perspective on non-Greek student housing and time in the Computer Science
+ department.`,
+  },
+];
+</script>
 
 <style scoped>
 .hero-section {

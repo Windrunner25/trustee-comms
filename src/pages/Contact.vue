@@ -1,5 +1,5 @@
 <template>
-    <v-container class="py-8">
+    <v-container class="py-8" style="width: 50%;">
       <h1 class="text-h4 mb-4">Contact Me</h1>
       <v-form>
         <v-text-field label="Name" required />
