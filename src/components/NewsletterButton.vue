@@ -2,16 +2,16 @@
   <v-dialog v-model="isDialogueOpen" max-width="50%" min-height="50%">
     <template v-slot:activator="{ props: activatorProps }">
       <v-btn v-bind="activatorProps" color="primary" variant="tonal"
-        >Read</v-btn
+        >Read More</v-btn
       >
     </template>
 
     <template v-slot:default>
-      <v-card>
-        <v-card-title>
-          <span class="headline">{{ props.title }}</span>
+      <v-card class="newsletter-card pa-6" elevation="6">
+        <v-card-title class="newsletter-title mb-4">
+          <span class="headline">{{ newsletter.title }}</span>
         </v-card-title>
-        <v-card-text>{{ props.body }}</v-card-text>
+        <v-card-text class="newsletter-body">{{ newsletter.body }}</v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="primary" variant="tonal" @click="close">Close</v-btn>
@@ -31,11 +31,38 @@ const router = useRouter();
 const isDialogueOpen = ref(false);
 
 const props = defineProps({
-  title: String,
-  body: String,
+  newsletter: {
+    type: Object,
+    required: true,
+  },
 });
 
 function close() {
   isDialogueOpen.value = false;
 }
 </script>
+
+<style scoped>
+.newsletter-card {
+  border-left: 6px solid #dbc979; /* Vuetify primary blue */
+  background-color: #fafafa;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.newsletter-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.newsletter-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.newsletter-body {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #444;
+}
+</style>
