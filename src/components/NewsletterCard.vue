@@ -16,7 +16,7 @@
               issue.date
             }}</v-card-subtitle>
             <v-card-actions>
-              <NewsletterButton />
+            <NewsletterButton/>
             </v-card-actions>
           </v-card>
         </v-col>
