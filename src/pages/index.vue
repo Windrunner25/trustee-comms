@@ -2,46 +2,46 @@
   <v-app>
     <v-main>
       <!-- Hero Section -->
-      <section class="hero-section">
+      <section class="hero-section fade-slide">
         <v-container class="py-16">
           <v-row align="center" justify="space-between">
             <v-col cols="12" md="6" class="text-left">
-              <h1 class="display-2 font-weight-bold mb-4 fade-slide">
+              <h1 class="display-2 font-weight-bold mb-4">
                 Brian Wolf - Board of Trustees
               </h1>
-              <p class="text-subtitle-1 mb-6 fade-slide">
-                Serving a three-year term as the student representative to the Board
-                of Trustees at DePauw University.
+              <p class="text-subtitle-1 mb-6">
+                Serving a three-year term as the student representative to the
+                Board of Trustees at DePauw University.
               </p>
-              <p class="text-subtitle-1 mb-6 fade-slide">
+              <p class="text-subtitle-1 mb-6">
                 Subscribe to receive communications about what I am working on
                 as a Trustee.
               </p>
               <v-text-field
                 label="Your email address"
                 hide-details
-                class="mb-3 fade-slide"
+                class="mb-3"
                 filled
                 v-model="email"
               ></v-text-field>
               <v-btn
                 color="primary"
+                variant="tonal"
                 size="large"
-                class="fade-slide"
                 @click="subscribe"
                 >Subscribe</v-btn
               >
               <v-alert
                 v-if="success"
                 type="success"
-                class="mt-3 fade-slide"
+                class="mt-3"
                 border="start"
                 elevation="2"
                 closable
               >
                 Subscription successful!
               </v-alert>
-              <p class="mt-4 text-caption fade-slide">
+              <p class="mt-4 text-caption">
                 * By clicking <strong>“Subscribe”</strong> button, you agree to
                 be contacted by Brian Wolf via email.
               </p>
@@ -50,7 +50,7 @@
               <v-img
                 src="../assets/IMG_6638.JPG"
                 alt="Newsletter Hero Image"
-                class="rounded-lg elevation-4 fade-slide"
+                class="rounded-lg elevation-4"
                 cover
                 height="450"
               ></v-img>
@@ -58,11 +58,11 @@
           </v-row>
         </v-container>
       </section>
-      <v-container>
+      <v-container class="fade-slide">
         <hr />
       </v-container>
       <!-- Latest Newsletter -->
-      <section class="latest-newsletter">
+      <section class="latest-newsletter fade-slide">
         <v-container class="py-12">
           <v-row justify="center">
             <v-col cols="12" md="8">

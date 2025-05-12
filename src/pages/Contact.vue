@@ -1,5 +1,5 @@
 <template>
-  <v-container class="py-8" style="width: 50%">
+  <v-container class="py-8 fade-slide" style="width: 50%">
     <h1 class="text-h4 mb-4">Contact Me</h1>
     <v-form @submit.prevent="submitForm">
       <v-text-field label="Name" v-model="name" required />
@@ -44,5 +44,20 @@ async function submitForm() {
 .v-container {
   max-width: 600px;
   margin: auto;
+}
+
+.fade-slide {
+  animation: fadeSlideUp 0.6s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
