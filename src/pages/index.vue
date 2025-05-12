@@ -11,17 +11,32 @@
               </h1>
               <p class="text-subtitle-1 mb-6 fade-slide">
                 Subscribe to receive communications about what I am working on
-                as a Trustee and to stay updated on the Board's activities.
+                as a Trustee.
               </p>
               <v-text-field
                 label="Your email address"
                 hide-details
                 class="mb-3 fade-slide"
                 filled
+                v-model="email"
               ></v-text-field>
-              <v-btn color="primary" size="large" class="fade-slide"
+              <v-btn
+                color="primary"
+                size="large"
+                class="fade-slide"
+                @click="subscribe"
                 >Subscribe</v-btn
               >
+              <v-alert
+                v-if="success"
+                type="success"
+                class="mt-3 fade-slide"
+                border="start"
+                elevation="2"
+                closable
+              >
+                Subscription successful!
+              </v-alert>
               <p class="mt-4 text-caption fade-slide">
                 * By clicking <strong>“Subscribe”</strong> button, you agree to
                 be contacted by Brian Wolf via email.
@@ -70,6 +85,11 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+import { addRecipient } from "@/firebase/firebaseService";
+
+const success = ref(false);
+const email = ref("");
 const may2025 = [
   {
     title: "May 2025 - DSG Elections",
@@ -82,6 +102,22 @@ const may2025 = [
  department.`,
   },
 ];
+
+async function subscribe() {
+  if (email.value) {
+    try {
+      await addRecipient(email.value);
+    } catch (error) {
+      console.error("Error adding recipient:", error);
+      alert("There was an error subscribing. Please try again later.");
+    }
+    console.log(`Subscribed: ${email.value}`);
+    success.value = true;
+    email.value = ""; // Clear the input field after subscription
+  } else {
+    alert("Please enter a valid email address.");
+  }
+}
 </script>
 
 <style scoped>
