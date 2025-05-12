@@ -10,8 +10,8 @@
                 Brian Wolf - Board of Trustees
               </h1>
               <p class="text-subtitle-1 mb-6 fade-slide">
-                Subscribe to receive communications about what I am working on as a Trustee
-                and to stay updated on the Board's activities.
+                Subscribe to receive communications about what I am working on
+                as a Trustee and to stay updated on the Board's activities.
               </p>
               <v-text-field
                 label="Your email address"
@@ -39,7 +39,9 @@
           </v-row>
         </v-container>
       </section>
-
+      <v-container>
+        <hr />
+      </v-container>
       <!-- Latest Newsletter -->
       <section class="latest-newsletter">
         <v-container class="py-12">
@@ -50,9 +52,10 @@
                   >Latest Happenings: May 2025</v-card-title
                 >
                 <v-card-text class="mt-2">
-                  This month, I attended a dinner with the Board of Trustees at the President's
-                  house. I introduced myself as the incoming student representative to current 
-                  Trustees and shared my background and qualifications.
+                  This month, I attended a dinner with the Board of Trustees at
+                  the President's house. I introduced myself as the incoming
+                  student representative to current Trustees and shared my
+                  background and qualifications.
                 </v-card-text>
                 <v-card-actions>
                   <v-btn color="primary" variant="tonal">Read</v-btn>
@@ -67,9 +70,7 @@
   </v-app>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style scoped>
 .hero-section {
