@@ -1,12 +1,16 @@
 <template>
-  <v-container class="py-8 fade-slide" style="width: 50%">
-    <h1 class="text-h4 mb-4">Contact Me</h1>
-    <v-form @submit.prevent="submitForm">
-      <v-text-field label="Name" v-model="name" required />
-      <v-text-field label="Email" v-model="email" type="email" required />
-      <v-textarea label="Message" v-model="message" rows="5" required />
-      <v-btn color="primary" class="mt-4" @click="submitForm">Send</v-btn>
-    </v-form>
+  <v-container class="py-8 fade-slide">
+    <v-row justify="center">
+      <v-col cols="12" md="8" lg="6">
+        <h1 class="text-h4 mb-4">Contact Me</h1>
+        <v-form @submit.prevent="submitForm">
+          <v-text-field label="Name" v-model="name" required />
+          <v-text-field label="Email" v-model="email" type="email" required />
+          <v-textarea label="Message" v-model="message" rows="5" required />
+          <v-btn color="primary" class="mt-4" @click="submitForm">Send</v-btn>
+        </v-form>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
